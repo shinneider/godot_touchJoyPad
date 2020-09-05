@@ -121,12 +121,14 @@ func calculateForce(var x, var y):
 	sendSignal2Listener()
 
 func set_tap_to_show(value):
-	modulate.a = 0
-	if value and not AnalogTapToShowContainer is ViewportContainer:
-		assert(
-			AnalogTapToShowContainer is ViewportContainer, 
-			"To use tag AnalogDynamicShowing you need to put GamePad inside a ViewportContainer"
-		)
+	if value:
+		modulate.a = 0
+		
+		if not AnalogTapToShowContainer is ViewportContainer:
+			assert(
+				AnalogTapToShowContainer is ViewportContainer, 
+				"To use tag AnalogDynamicShowing you need to put GamePad inside a ViewportContainer"
+			)
 	
 	AnalogTapToShow = value
 		

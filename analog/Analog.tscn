@@ -4,8 +4,6 @@
 [ext_resource path="res://plugins/touchJoyPad/analog/small_circle.png" type="Texture" id=2]
 [ext_resource path="res://plugins/touchJoyPad/analog/big_circle.png" type="Texture" id=3]
 
-
-
 [sub_resource type="Animation" id=1]
 length = 5.0
 tracks/0/type = "value"
