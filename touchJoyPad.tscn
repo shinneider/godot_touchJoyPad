@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://plugins/touchJoyPad/dpad/DPad.tscn" type="PackedScene" id=1]
+[ext_resource path="res://plugins/touchJoyPad/analog/Analog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://plugins/touchJoyPad/touchJoyPad.gd" type="Script" id=3]
+
+[node name="GamePad" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="leftPad" type="Node2D" parent="."]
+
+[node name="JoyStickLeft" parent="leftPad" instance=ExtResource( 2 )]
+
+[node name="DPad" parent="leftPad" instance=ExtResource( 1 )]
