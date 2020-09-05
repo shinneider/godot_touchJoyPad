@@ -8,9 +8,9 @@
 
 # Configuration:
 
-1. Basic configuration:
+1. Basic configuration.
 
-   1. Arguments
+   1. Arguments.
       `After import scene check Inspector tab of Godot` <br />
       1. Left Pad Style:
          Select `tipe of Joy`, a classical `D-Pad` or a modern `Analog`.
@@ -21,7 +21,7 @@
       1. Analog Tap To Show:
          This `show the analog` just if `user tap in the screen`.
 
-1. Receive Analog movimetation
+1. Receive Analog movimentation.
    - The touchJoyPad is attached to the group Joystick [see this](https://docs.godotengine.org/en/stable/getting_started/step_by_step/scripting_continued.html#groups)
    - On each Analog movimentation ths function `analog_signal_change` is fired. The func `analog_signal_change` analog_signal_change `analogPosition` and `analogName`.
    - The `analogPosition` `argument` is x,y `Analog coordinates` (x and y contains `values between -1 and 1`) being that `x < 0` is moving to the `left`, `x > 0` moving to `right`, `y < 0` moving `down`, `y > 0` moving to `up`, and finally `x = 0 and y = 0` `isn't moving`.
@@ -37,17 +37,23 @@
         Input.action_press("ui_down") if analogPosition.y < -0.2 else Input.action_release("ui_down")
         Input.action_press("ui_up") if analogPosition.y > 0.2 else Input.action_release("ui_up")
      ```
-1. Analog Tap To Show
+1. Analog Tap To Show.
 
    - If you `need to use this`, you need to `put de scene inside` a `ViewportContainer` or a `error occurs` and `not compile`.
    - This `occurs because` the `ViewportContainer` is `used to determine a area` of `Tap To Show`.
    - Ex: `two Analog`, `one in each corner` of the screen, the `ViewportContainer` `determines area of each Analog`, without this all screen active the two analogs
 
-1. Obs in standalone use of `DPad` or `Analog`
+1. Obs in standalone use of `DPad` or `Analog`.
+
    1. If you need to `use manually` the plugins, `you need to implement logic` for this cases:
       - `Hide` (Because `enable = false`, `mantains the touch area`, `i sugest` move button for out of the screen `position = Vector2(-1000, -1000)`).
       - `Hide if touch device` (Check if touch device using `OS.has_touchscreen_ui_hint()`).
       - `Pass the param AnalogTapToShowContainer` (Used for the Analog in Tap To Show) `for default he search ViewportContainer in up parent`, but if you need, just specify a parent for her (Ex: `$"leftPad/JoyStickLeft".AnalogTapToShowContainer = get_parent()`).
+
+1. Help in Test/Debug.
+   - to help in your test in desktop without touchscreen, enable godot touch emulator.
+   - Go to `Project Settings`, on the left menu search `Pointing` inside `Input Devices`.
+   - Enable `Emulate Touch From Mouse`, on this enable, mouse is used as touch on the screen.
 
 # Images:
 
