@@ -2,9 +2,16 @@
 
 # Install:
 
-1. Create `plugins` folder in project root
-2. Download this repo and put all files inside a `touchJoyPad` folder (inside a `plugins` folder).
-3. Use `touchJoyPad.tscn` scene in your project
+1. Manual Mode.
+
+   1. Create `plugins` folder in project root.
+   1. Download this repo and put all files inside a `touchJoyPad` folder (inside a `plugins` folder).
+   1. Use `touchJoyPad.tscn` scene in your project.
+
+1. Git Mode.
+   1. if you not started git repo before, start it `git init`
+   1. in first time `git submodule add https://github.com/shinneider/godot_touchJoyPad.git ./plugins/touchJoyPad`
+   1. in next repo clone, clone normally, after clone, run `git submodule init`
 
 # Configuration:
 
