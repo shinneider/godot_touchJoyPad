@@ -43,7 +43,7 @@
    - This `occurs because` the `ViewportContainer` is `used to determine a area` of `Tap To Show`.
    - Ex: `two Analog`, `one in each corner` of the screen, the `ViewportContainer` `determines area of each Analog`, without this all screen active the two analogs
 
-1. Oss in standalone use of `DPad` or `Analog`
+1. Obs in standalone use of `DPad` or `Analog`
    1. If you need to `use manually` the plugins, `you need to implement logic` for this cases:
       - `Hide` (Because `enable = false`, `mantains the touch area`, `i sugest` move button for out of the screen `position = Vector2(-1000, -1000)`).
       - `Hide if touch device` (Check if touch device using `OS.has_touchscreen_ui_hint()`).
@@ -65,6 +65,6 @@ Using Analog with tap to show:
 
 # Credits
 
-[kubecz3k](https://godotengine.org/qa/user/kubecz3k) First version of code analog.
-[gswashburn](https://godotengine.org/qa/user/gswashburn) Port code analog to Godot 3.
-[kenney.kl](https://www.kenney.nl/assets/onscreen-controls) Art for analog and D-Pad.
+- [kubecz3k](https://godotengine.org/qa/user/kubecz3k) First version of code analog.
+- [gswashburn](https://godotengine.org/qa/user/gswashburn) Port code analog to Godot 3.
+- [kenney.kl](https://www.kenney.nl/assets/onscreen-controls) Art for analog and D-Pad.
