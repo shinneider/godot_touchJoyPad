@@ -62,7 +62,7 @@ func extractPointerIdx(event):
 	var mouseMove = event is InputEventMouseMotion
 	
 	if touch or drag:
-		return 1
+		return event.index
 	elif mouseButton or mouseMove:
 		return 0
 	else:
